@@ -1,9 +1,9 @@
 <?php
 
-namespace MeesterDev\PackageLicenseParser\Parsers;
+namespace MeesterDev\PackageParser\Parsers;
 
 use MeesterDev\FileWrapper\File;
-use MeesterDev\PackageLicenseParser\Entities\PackageInformation;
+use MeesterDev\PackageParser\Entities\PackageInformation;
 use stdClass;
 
 class ComposerLockParser extends AbstractParser {

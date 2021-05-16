@@ -1,6 +1,6 @@
 <?php
 
-namespace MeesterDev\PackageLicenseParser\Licenses;
+namespace MeesterDev\PackageParser\Licenses;
 
 use MeesterDev\FileWrapper\File;
 

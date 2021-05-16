@@ -1,11 +1,11 @@
 <?php
 
-namespace MeesterDev\PackageLicenseParser\Parsers;
+namespace MeesterDev\PackageParser\Parsers;
 
 use MeesterDev\FileWrapper\File;
-use MeesterDev\PackageLicenseParser\Entities\PackageInformation;
-use MeesterDev\PackageLicenseParser\Licenses\Licenses;
-use MeesterDev\PackageLicenseParser\Licenses\Loader as LicenseLoader;
+use MeesterDev\PackageParser\Entities\PackageInformation;
+use MeesterDev\PackageParser\Licenses\Licenses;
+use MeesterDev\PackageParser\Licenses\Loader as LicenseLoader;
 use stdClass;
 
 abstract class AbstractParser {

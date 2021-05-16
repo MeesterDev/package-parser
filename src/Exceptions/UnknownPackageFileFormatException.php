@@ -1,6 +1,6 @@
 <?php
 
-namespace MeesterDev\PackageLicenseParser\Exceptions;
+namespace MeesterDev\PackageParser\Exceptions;
 
 use Exception;
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace MeesterDev\PackageLicenseParser\Entities;
+namespace MeesterDev\PackageParser\Entities;
 
 use MeesterDev\FileWrapper\File;
-use MeesterDev\PackageLicenseParser\Licenses\Licenses;
+use MeesterDev\PackageParser\Licenses\Licenses;
 
 class PackageInformation {
     public const SOURCE_NPM              = 'npm';

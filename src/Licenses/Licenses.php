@@ -1,6 +1,6 @@
 <?php
 
-namespace MeesterDev\PackageLicenseParser\Licenses;
+namespace MeesterDev\PackageParser\Licenses;
 
 /**
  * Note that we only have constants for supported licenses. Unsupported licenses will still work, as long as the package has a LICENSE file.

@@ -1,9 +1,9 @@
 <?php
 
 use MeesterDev\FileWrapper\File;
-use MeesterDev\PackageLicenseParser\Entities\PackageInformation;
-use MeesterDev\PackageLicenseParser\Parsers\AbstractParser;
-use MeesterDev\PackageLicenseParser\Parsers\ParserFactory;
+use MeesterDev\PackageParser\Entities\PackageInformation;
+use MeesterDev\PackageParser\Parsers\AbstractParser;
+use MeesterDev\PackageParser\Parsers\ParserFactory;
 use PHPUnit\Framework\TestCase;
 
 class ComposerLockTest extends TestCase {

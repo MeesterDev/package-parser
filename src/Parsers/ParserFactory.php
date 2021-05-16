@@ -1,10 +1,10 @@
 <?php
 
-namespace MeesterDev\PackageLicenseParser\Parsers;
+namespace MeesterDev\PackageParser\Parsers;
 
 use MeesterDev\FileWrapper\Exception\NotReadableException;
 use MeesterDev\FileWrapper\File;
-use MeesterDev\PackageLicenseParser\Exceptions\UnknownPackageFileFormatException;
+use MeesterDev\PackageParser\Exceptions\UnknownPackageFileFormatException;
 use JsonException;
 
 abstract class ParserFactory {
