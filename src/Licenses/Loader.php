@@ -15,12 +15,7 @@ class Loader {
     }
 
     private static function attemptToLoadFromBaseName(File $directory, string $filename): ?File {
-        $file = $directory->go($filename);
-        if ($file->isFile()) {
-            return $file;
-        }
-
-        foreach ($directory->glob("$filename.*") as $file) {
+        foreach ($directory->glob("$filename*") as $file) {
             return $file;
         }
 
