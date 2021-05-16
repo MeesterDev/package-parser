@@ -1,0 +1,10 @@
+{
+  "name": "fake/fake",
+  "authors": [
+    {
+      "name": "Fake Fake",
+      "email": "fake@fake.fake"
+    }
+  ],
+  "require": {}
+}

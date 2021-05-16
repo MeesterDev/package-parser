@@ -1,0 +1,13 @@
+{
+    "name": "fake/fake",
+    "authors": [
+        {
+            "name": "Fake Fake",
+            "email": "fake@fake.fake"
+        }
+    ],
+    "require": {
+        "symfony/polyfill-mbstring": "^1.22",
+        "psr/log": "^1.1"
+    }
+}
