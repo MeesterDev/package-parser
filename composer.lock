@@ -4,11 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0578874848ce8fd86f0b90db8c3f2139",
+    "content-hash": "99661a0ff42fae8669530a4a0f3e1d99",
     "packages": [
         {
             "name": "meesterdev/file-wrapper",
-            "version": "dev-main",
+            "version": "0.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/MeesterDev/file-wrapper.git",
@@ -26,7 +26,6 @@
             "require-dev": {
                 "phpunit/phpunit": "^9.5"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -47,7 +46,7 @@
             "homepage": "https://meester.dev/",
             "support": {
                 "issues": "https://github.com/MeesterDev/file-wrapper/issues",
-                "source": "https://github.com/MeesterDev/file-wrapper/tree/main"
+                "source": "https://github.com/MeesterDev/file-wrapper/tree/0.0.1"
             },
             "time": "2021-01-03T18:54:19+00:00"
         }
@@ -2147,9 +2146,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "meesterdev/file-wrapper": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

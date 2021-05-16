@@ -3,7 +3,7 @@
   "description": "Parse composer/npm package locks into a list of packages with some basic information.",
   "minimum-stability": "stable",
   "license": "MIT",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "authors": [
     {
       "name": "Thomas Meester",
@@ -21,7 +21,7 @@
   },
   "autoload": {
     "psr-4": {
-      "MeesterDev\\PackageLicenseParser\\": "src"
+      "MeesterDev\\PackageParser\\": "src"
     }
   }
 }
