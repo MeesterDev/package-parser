@@ -1,5 +1,5 @@
 {
-  "name": "meesterdev/package-license-parser",
+  "name": "meesterdev/package-parser",
   "description": "Parse composer/npm package locks into a list of packages with some basic information.",
   "minimum-stability": "stable",
   "license": "MIT",
