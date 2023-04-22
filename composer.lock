@@ -4,27 +4,31 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7c691a7c3ae7b430a43c403423f16f36",
+    "content-hash": "88112e731ae8e78e48ae4dcde9c37e0f",
     "packages": [
         {
             "name": "meesterdev/file-wrapper",
-            "version": "0.0.1",
+            "version": "0.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/MeesterDev/file-wrapper.git",
-                "reference": "f9deb2533919e06ea42400a0fff6b87de380bb62"
+                "reference": "7dee40f40a960d0d30edb5dcb8772ae3d7ef5108"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MeesterDev/file-wrapper/zipball/f9deb2533919e06ea42400a0fff6b87de380bb62",
-                "reference": "f9deb2533919e06ea42400a0fff6b87de380bb62",
+                "url": "https://api.github.com/repos/MeesterDev/file-wrapper/zipball/7dee40f40a960d0d30edb5dcb8772ae3d7ef5108",
+                "reference": "7dee40f40a960d0d30edb5dcb8772ae3d7ef5108",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.4|^8.0"
+                "php": "^8.0|^8.1|^8.2"
             },
             "require-dev": {
-                "phpunit/phpunit": "^9.5"
+                "phpunit/phpunit": "^9.5|^10"
+            },
+            "suggest": {
+                "ext-dom": "*",
+                "ext-simplexml": "*"
             },
             "type": "library",
             "autoload": {
@@ -46,9 +50,9 @@
             "homepage": "https://meester.dev/",
             "support": {
                 "issues": "https://github.com/MeesterDev/file-wrapper/issues",
-                "source": "https://github.com/MeesterDev/file-wrapper/tree/0.0.1"
+                "source": "https://github.com/MeesterDev/file-wrapper/tree/0.0.2"
             },
-            "time": "2021-01-03T18:54:19+00:00"
+            "time": "2023-04-22T10:09:51+00:00"
         }
     ],
     "packages-dev": [
