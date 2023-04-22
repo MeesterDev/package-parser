@@ -41,6 +41,10 @@ class ComposerLockParser extends AbstractParser {
     }
 
     private function parsePackage(stdClass $package, File $vendorDirectory): ?PackageInformation {
+        if ($package->type === 'metapackage') {
+            return null;
+        }
+
         $result                      = new PackageInformation();
         $result->name                = $package->name;
         $result->description         = $package->description;

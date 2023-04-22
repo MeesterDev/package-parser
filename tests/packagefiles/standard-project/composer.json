@@ -8,6 +8,7 @@
     ],
     "require": {
         "symfony/polyfill-mbstring": "^1.22",
+        "notreal/metapackage": "^1.0",
         "psr/log": "^1.1"
     }
 }

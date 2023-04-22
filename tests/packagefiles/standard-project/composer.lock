@@ -135,6 +135,44 @@
                 }
             ],
             "time": "2021-01-22T09:19:47+00:00"
+        },
+        {
+            "name": "notreal/metapackage",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/meesterdev/doesntexist",
+                "reference": "4552c57335579a3ba9cceadffcb2510f9541ee98"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/meesterdev/doesntexist/zipball/4552c57335579a3ba9cceadffcb2510f9541ee98",
+                "reference": "4552c57335579a3ba9cceadffcb2510f9541ee98",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0"
+            },
+            "type": "metapackage",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "MeesterDev",
+                    "email": "info@example.org"
+                }
+            ],
+            "description": "This is not an actual package",
+            "homepage": "https://example.org",
+            "keywords": [
+                "fake"
+            ],
+            "support": {
+                "source": "https://github.com/meesterdev/doesntexist/tree/v1.0.0"
+            },
+            "time": "2023-04-22T11:00:38+00:00"
         }
     ],
     "packages-dev": [],
