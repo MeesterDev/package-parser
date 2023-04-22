@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "88112e731ae8e78e48ae4dcde9c37e0f",
+    "content-hash": "f618d0b16a3675445c5d7e5426a1d999",
     "packages": [
         {
             "name": "meesterdev/file-wrapper",

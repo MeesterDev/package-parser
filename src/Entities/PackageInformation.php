@@ -3,7 +3,6 @@
 namespace MeesterDev\PackageParser\Entities;
 
 use MeesterDev\FileWrapper\File;
-use MeesterDev\PackageParser\Licenses\Licenses;
 
 class PackageInformation {
     public const SOURCE_NPM              = 'npm';
@@ -23,9 +22,7 @@ class PackageInformation {
     }
 
     public function doesntHaveLicense(): bool {
-        return $this->licenseFileLocation === null
-            && ($this->licenseType === null
-                || !in_array($this->licenseType, Licenses::LICENSES_WITH_TEXT_AVAILABLE));
+        return $this->licenseFileLocation === null && $this->licenseType === null;
     }
 
     public function __toString(): string {

@@ -1,19 +1,12 @@
 <?php
 
+namespace MeesterDev\Tests;
+
 use MeesterDev\FileWrapper\File;
 use MeesterDev\PackageParser\Entities\PackageInformation;
-use MeesterDev\PackageParser\Parsers\AbstractParser;
-use MeesterDev\PackageParser\Parsers\ParserFactory;
-use PHPUnit\Framework\TestCase;
 
-class PackageLockTest extends TestCase {
+class PackageLockTest extends BaseTestCase {
     private const PACKAGE_LOCK_VERSIONS = [1, 2];
-
-    private static function createParser(string $path): AbstractParser {
-        return ParserFactory::createForFilePath(
-            __DIR__ . DIRECTORY_SEPARATOR . 'packagefiles' . DIRECTORY_SEPARATOR . str_replace('/', DIRECTORY_SEPARATOR, $path)
-        );
-    }
 
     public function testPackageLockWithoutDependencies(): void {
         foreach (static::PACKAGE_LOCK_VERSIONS as $packageLockVersion) {
@@ -36,7 +29,7 @@ class PackageLockTest extends TestCase {
     public function testPublicPackagesIncluded(): void {
         foreach (static::PACKAGE_LOCK_VERSIONS as $packageLockVersion) {
             $parser = static::createParser("public-domain-project-npm-$packageLockVersion/package-lock.json");
-            $parser->includePublicDomainLicenses();
+            $parser->ignoreLicenses(['proprietary', 'UNLICENSED']);
 
             $packages = $parser->parse();
 
@@ -58,7 +51,7 @@ class PackageLockTest extends TestCase {
 
     public function testLicenseFileParsingCorrect(): void {
         foreach (static::PACKAGE_LOCK_VERSIONS as $packageLockVersion) {
-            $parser   = static::createParser("standard-project-npm-$packageLockVersion/package-lock.json");
+            $parser = static::createParser("standard-project-npm-$packageLockVersion/package-lock.json");
             $packages = $parser->parse();
 
             $this->assertPackageNamesEquals(['axios', 'follow-redirects'], $packages);

@@ -4,12 +4,11 @@ namespace MeesterDev\PackageParser\Parsers;
 
 use MeesterDev\FileWrapper\File;
 use MeesterDev\PackageParser\Entities\PackageInformation;
-use MeesterDev\PackageParser\Licenses\Licenses;
 use MeesterDev\PackageParser\Licenses\Loader as LicenseLoader;
 use stdClass;
 
 abstract class AbstractParser {
-    protected array    $skipLicenses = Licenses::PUBLIC_DOMAIN_LICENSES;
+    protected array    $skipLicenses = [];
     protected stdClass $mainPackageFileContents;
     protected File     $mainPackageFile;
     public array       $skippedPackages;
@@ -22,10 +21,14 @@ abstract class AbstractParser {
         $this->failedPackages          = [];
     }
 
-    public function includePublicDomainLicenses(): self {
-        $this->skipLicenses = [];
+    public function ignoreLicenses(array $names): void {
+        $this->skipLicenses = $names;
+    }
 
-        return $this;
+    public function alsoIgnoreLicenses(array $names): void {
+        foreach ($names as $name) {
+            $this->skipLicenses[] = $name;
+        }
     }
 
     protected static function getLicenseFilePath(File $dependencyDirectory): ?File {
@@ -33,7 +36,7 @@ abstract class AbstractParser {
     }
 
     protected function shouldSkipPackage(PackageInformation $package): bool {
-        return in_array($package->licenseType, $this->skipLicenses) || in_array($package->licenseType, Licenses::IGNORED_LICENSES);
+        return in_array($package->licenseType, $this->skipLicenses);
     }
 
     protected function licenseLoaded(PackageInformation $result): bool {

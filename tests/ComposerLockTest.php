@@ -1,18 +1,11 @@
 <?php
 
+namespace MeesterDev\Tests;
+
 use MeesterDev\FileWrapper\File;
 use MeesterDev\PackageParser\Entities\PackageInformation;
-use MeesterDev\PackageParser\Parsers\AbstractParser;
-use MeesterDev\PackageParser\Parsers\ParserFactory;
-use PHPUnit\Framework\TestCase;
 
-class ComposerLockTest extends TestCase {
-    private static function createParser(string $path): AbstractParser {
-        return ParserFactory::createForFilePath(
-            __DIR__ . DIRECTORY_SEPARATOR . 'packagefiles' . DIRECTORY_SEPARATOR . str_replace('/', DIRECTORY_SEPARATOR, $path)
-        );
-    }
-
+class ComposerLockTest extends BaseTestCase {
     public function testComposerLockWithoutDependencies(): void {
         $parser = static::createParser('empty-project/composer.lock');
 
@@ -31,7 +24,7 @@ class ComposerLockTest extends TestCase {
 
     public function testPublicPackagesIncluded(): void {
         $parser = static::createParser('public-domain-project/composer.lock');
-        $parser->includePublicDomainLicenses();
+        $parser->ignoreLicenses(['proprietary', 'UNLICENSED']);
 
         $packages = $parser->parse();
 
@@ -54,7 +47,7 @@ class ComposerLockTest extends TestCase {
     }
 
     public function testLicenseFileParsingCorrect(): void {
-        $parser   = static::createParser('standard-project/composer.lock');
+        $parser = static::createParser('standard-project/composer.lock');
         $packages = $parser->parse();
 
         $this->assertPackageNamesEquals(['composer', 'psr/log', 'symfony/polyfill-mbstring'], $packages);
