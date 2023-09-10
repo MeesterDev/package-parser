@@ -47,7 +47,7 @@ class ComposerLockParser extends AbstractParser {
 
         $result                      = new PackageInformation();
         $result->name                = $package->name;
-        $result->description         = $package->description;
+        $result->description         = $package->description ?? null;
         $result->homepage            = $package->homepage ?? null;
         $result->source              = PackageInformation::SOURCE_COMPOSER;
         $result->packageFileLocation = $vendorDirectory->go(str_replace('/', DIRECTORY_SEPARATOR, $result->name));

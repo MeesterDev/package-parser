@@ -8,11 +8,14 @@ use MeesterDev\PackageParser\Licenses\Loader as LicenseLoader;
 use stdClass;
 
 abstract class AbstractParser {
+    /** @var string[] */
     protected array    $skipLicenses = [];
     protected stdClass $mainPackageFileContents;
     protected File     $mainPackageFile;
+    /** @var PackageInformation[] */
     public array       $skippedPackages;
-    public array       $failedPackages;
+    /** @var PackageInformation[] */
+    public array $failedPackages;
 
     public function __construct(stdClass $mainPackageFileContents, File $mainPackageFile) {
         $this->mainPackageFileContents = $mainPackageFileContents;
@@ -21,10 +24,20 @@ abstract class AbstractParser {
         $this->failedPackages          = [];
     }
 
+    /**
+     * @param string[] $names
+     *
+     * @return void
+     */
     public function ignoreLicenses(array $names): void {
         $this->skipLicenses = $names;
     }
 
+    /**
+     * @param string[] $names
+     *
+     * @return void
+     */
     public function alsoIgnoreLicenses(array $names): void {
         foreach ($names as $name) {
             $this->skipLicenses[] = $name;

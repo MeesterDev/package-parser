@@ -76,7 +76,7 @@ class ComposerLockTest extends BaseTestCase {
 
         $this->assertEquals('A Dependency Manager for PHP.', $packages['composer']->description);
         $this->assertEquals('Common interface for logging libraries', $packages['psr/log']->description);
-        $this->assertEquals('Symfony polyfill for the Mbstring extension', $packages['symfony/polyfill-mbstring']->description);
+        $this->assertNull($packages['symfony/polyfill-mbstring']->description);
 
         $this->assertEquals(PackageInformation::SOURCE_COMPOSER, $packages['composer']->source);
         $this->assertEquals(PackageInformation::SOURCE_COMPOSER, $packages['psr/log']->source);
