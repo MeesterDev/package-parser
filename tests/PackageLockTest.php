@@ -6,7 +6,7 @@ use MeesterDev\FileWrapper\File;
 use MeesterDev\PackageParser\Entities\PackageInformation;
 
 class PackageLockTest extends BaseTestCase {
-    private const PACKAGE_LOCK_VERSIONS = [1, 2];
+    private const PACKAGE_LOCK_VERSIONS = [1, 2, 3];
 
     public function testPackageLockWithoutDependencies(): void {
         foreach (static::PACKAGE_LOCK_VERSIONS as $packageLockVersion) {

@@ -3,7 +3,7 @@
   "description": "Parse composer/npm package locks into a list of packages with some basic information.",
   "minimum-stability": "stable",
   "license": "MIT",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "authors": [
     {
       "name": "Thomas Meester",

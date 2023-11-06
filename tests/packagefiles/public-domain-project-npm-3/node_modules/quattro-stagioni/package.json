@@ -1,0 +1,29 @@
+{
+  "name": "quattro-stagioni",
+  "version": "0.1.0",
+  "description": "A library that adds CSS classes for date-related events, currently the current season. Think 'modernizr for dates'.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cimnine/quattro-stagioni.git"
+  },
+  "keywords": [
+    "css",
+    "vanilla",
+    "date"
+  ],
+  "author": "Christian Mäder (cimnine)",
+  "license": "CC0",
+  "bugs": {
+    "url": "https://github.com/cimnine/quattro-stagioni/issues"
+  },
+  "homepage": "https://github.com/cimnine/quattro-stagioni#readme",
+  "devDependencies": {
+    "jshint": "^2.11.0",
+    "grunt": "^1.1.0",
+    "grunt-contrib-connect": "^2.1.0"
+  }
+}

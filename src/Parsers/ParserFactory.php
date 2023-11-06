@@ -35,8 +35,13 @@ abstract class ParserFactory {
             return new PackageLockVersion1Parser($contentObject, $file);
         }
 
-        if (isset($contentObject->lockfileVersion, $contentObject->packages) && $contentObject->lockfileVersion === 2) {
-            return new PackageLockVersion2Parser($contentObject, $file);
+        if (isset($contentObject->lockfileVersion, $contentObject->packages)) {
+            if ($contentObject->lockfileVersion === 2) {
+                return new PackageLockVersion2Parser($contentObject, $file);
+            }
+            elseif ($contentObject->lockfileVersion === 3) {
+                return new PackageLockVersion3Parser($contentObject, $file);
+            }
         }
 
         throw new UnknownPackageFileFormatException($file->path);
